@@ -1,6 +1,6 @@
 # weather_api_app
 
-git branch 25_ad_listing_with_networking && git checkout 25_ad_listing_with_networking && git add . && git commit -m "25_ad_listing_with_networking" && git push --set-upstream origin 25_ad_listing_with_networking
+git branch 26_weather_app_ui_api_update && git checkout 26_weather_app_ui_api_update && git add . && git commit -m "26_weather_app_ui_api_update" && git push --set-upstream origin 26_weather_app_ui_api_update
 
 # App Screens
 

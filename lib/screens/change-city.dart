@@ -19,7 +19,10 @@ class _ChangeCityScreenState extends State<ChangeCityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Select a new location "),
+        backgroundColor: Colors.green.shade900,
+      ),
       body: Container(
         child: Column(
           children: [
@@ -57,6 +60,7 @@ class _ChangeCityScreenState extends State<ChangeCityScreen> {
               onCityChanged: (value) {
                 setState(() {
                   cityValue = value.toString();
+                  //print(cityValue);
                 });
               },
             ),
@@ -67,17 +71,18 @@ class _ChangeCityScreenState extends State<ChangeCityScreen> {
                   setState(() {
                     address = "$cityValue, $stateValue, $countryValue";
                   });
-                 
                 },
-                child: Text("Print Data")),
+                child: Text("Confirm selection", style: TextStyle(color: Colors.blue.shade900),)),
             TextButton(
                 onPressed: () {
                   setState(() {
                     address = "$cityValue, $stateValue, $countryValue";
                   });
-                   Get.to(NewLocationTemperatureScreen(cityValue: cityValue.toString(),));
+                  Get.offAll(NewLocationTemperatureScreen(
+                    cityValue: cityValue,
+                  ));
                 },
-                child: Text("Check new location's weather")),
+                child: Text("See new location's weather", style: TextStyle(color: Colors.orange.shade900),)),
             Text(address)
           ],
         ),
